@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-image: url('img/koi.jpg');
+    background-size: cover;
+    color: #fff; /* Texto blanco */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(30, 20px);
+    grid-gap: 1px;
+    margin-top: 20px;
+    background-color: rgba(95, 158, 160, 0.8); 
+    border: 5px solid salmon; /* Borde blanco alrededor del tablero */
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid peachpuff; /* Borde blanco alrededor de cada celda */
+}
+
+.alive {
+    background-color: orangered; /* Color de fondo para las células vivas (negro) */
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    background-color: #333; /* Color de fondo para los botones (gris oscuro) */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555; /* Cambiar el color de fondo al pasar el ratón sobre los botones */
+}

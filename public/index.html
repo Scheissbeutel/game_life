@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de la Vida de Conway</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="grid-container" id="grid"></div>
+        <div class="buttons">
+            <button onclick="startGame()">Iniciar</button>
+            <button onclick="pauseGame()">Pausar</button>
+            <button onclick="clearGrid()">Limpiar</button>
+            <button onclick="generateRandomGrid()">Randomizar Cuadrícula</button>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.3.1/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
