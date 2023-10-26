@@ -1,3 +1,16 @@
+/**
+ * @file script.js
+ * @author Pérez Apablaza Augusto (brickskill3r@gmail.com)
+ * @brief Conway´s Game Life
+ * @version 0.1
+ * @date 2023-10-26
+ * 
+ * @copyright Copyright (c) 2023 Released under the MIT license
+ * @link https://opensource.org/licenses/MIT @endlink
+ * 
+ */
+
+
 const rows = 30;
 const cols = 30;
 let grid = new Array(rows).fill(null).map(() => new Array(cols).fill(false));
