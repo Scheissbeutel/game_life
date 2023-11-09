@@ -1,6 +1,6 @@
 /**
  * @file script.js
- * @author Pérez Apablaza Augusto (brickskill3r@gmail.com)
+ * @author Pérez Apablaza Augusto 
  * @brief Conway´s Game Life
  * @version 0.1
  * @date 2023-10-26
@@ -30,17 +30,17 @@ function createGrid() {
     }
 }
 
-// Función para aplicar las reglas del juego y actualizar el estado del tablero
+//Función con la logica de las reglas del juego y actualizacion del estado del tablero
 function updateGrid() {
     const newGrid = new Array(rows).fill(null).map(() => new Array(cols).fill(false));
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             const neighbors = countNeighbors(i, j);
             if (grid[i][j]) {
-                // Célula viva
+                //Celula viva
                 newGrid[i][j] = neighbors === 2 || neighbors === 3;
             } else {
-                // Célula muerta
+                //Celula muerta
                 newGrid[i][j] = neighbors === 3;
             }
         }
@@ -49,7 +49,7 @@ function updateGrid() {
     renderGrid();
 }
 
-// Función para contar el número de células vivas alrededor de una celda
+//Funcion para contar el numero de celulas vivas alrededor de una celda
 function countNeighbors(x, y) {
     let count = 0;
     for (let i = -1; i <= 1; i++) {
@@ -66,13 +66,13 @@ function countNeighbors(x, y) {
     return count;
 }
 
-// Función para alternar el estado de una celda al hacer clic en ella
+//Funcion para alternar el estado de una celda de celula viva/muerta
 function toggleCell(x, y) {
     grid[x][y] = !grid[x][y];
     renderGrid();
 }
 
-// Función para renderizar el tablero en el DOM
+//Funcion para renderizar el tablero en el DOM
 function renderGrid() {
     const cells = document.querySelectorAll('.cell');
     cells.forEach((cell, index) => {
@@ -86,17 +86,20 @@ function renderGrid() {
     });
 }
 
-// Función para iniciar el juego
+//Funcion para inicializar el juego
 function startGame() {
+    if(!intervalId){
     intervalId = setInterval(updateGrid, 200); // Actualiza el tablero cada 200 milisegundos (5 veces por segundo)
+    }
 }
 
-// Función para pausar el juego
+//Funcion para pausar el juego
 function pauseGame() {
     clearInterval(intervalId);
+    intervalId=0;//lo igualo a 0 para que pueda entrar en el if dentro de startGame()
 }
 
-// Función para limpiar el tablero
+//Funcion para limpiar el tablero
 function clearGrid() {
     grid = new Array(rows).fill(null).map(() => new Array(cols).fill(false));
     renderGrid();

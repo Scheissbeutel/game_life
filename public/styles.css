@@ -11,6 +11,7 @@
  */
 
 body {
+    /*texto de color blanco*/
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -19,26 +20,27 @@ body {
     padding: 20px;
     background-image: url('img/koi.jpg');
     background-size: cover;
-    color: #fff; /* Texto blanco */
+    color: #fff; 
 }
 
 .grid-container {
+    /* Borde blanco alrededor del tablero */
     display: grid;
     grid-template-columns: repeat(30, 20px);
     grid-gap: 1px;
     margin-top: 20px;
     background-color: rgba(95, 158, 160, 0.8); 
-    border: 5px solid salmon; /* Borde blanco alrededor del tablero */
+    border: 5px solid salmon; 
 }
 
 .cell {
     width: 20px;
     height: 20px;
-    border: 1px solid peachpuff; /* Borde blanco alrededor de cada celda */
+    border: 1px solid peachpuff; /*Borde blanco alrededor de cada celda*/
 }
 
 .alive {
-    background-color: orangered; /* Color de fondo para las células vivas (negro) */
+    background-color: orangered; /*Color de fondo para las células vivas (negro)*/
 }
 
 .buttons {
@@ -46,9 +48,11 @@ body {
 }
 
 button {
+     /*Color de fondo para los botones (gris oscuro)*/
+     /*Texto blanco*/
     margin: 5px;
-    background-color: #333; /* Color de fondo para los botones (gris oscuro) */
-    color: #fff; /* Texto blanco */
+    background-color: #333; 
+    color: #fff; 
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -57,5 +61,6 @@ button {
 }
 
 button:hover {
-    background-color: #555; /* Cambiar el color de fondo al pasar el ratón sobre los botones */
+    /*Cambiar el color de fondo al pasar el ratón sobre los botones*/
+    background-color: #555; 
 }
